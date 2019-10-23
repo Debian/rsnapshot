@@ -1,0 +1,21 @@
+Source: rsnapshot
+Section: utils
+Priority: optional
+Maintainer: Michael Lustfield <michael@lustfield.net>
+Build-Depends: debhelper (>= 12)
+Build-Depends-Indep: openssh-client | ssh-client, rsync, lvm2, udev
+Standards-Version: 4.4.1
+Rules-Requires-Root: no
+Homepage: http://www.rsnapshot.org/
+Vcs-Browser: https://github.com/MTecknology/rsnapshot
+Vcs-Git: https://github.com/MTecknology/rsnapshot.git
+
+Package: rsnapshot
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, rsync, logrotate, liblchown-perl
+Recommends: openssh-client | ssh-client
+Description: local and remote filesystem snapshot utility
+ rsnapshot is an rsync-based filesystem snapshot utility. It can take
+ incremental backups of local and remote filesystems for any number of
+ machines. rsnapshot makes extensive use of hard links, so disk space is
+ only used when absolutely necessary.
