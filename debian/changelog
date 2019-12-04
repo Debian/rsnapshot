@@ -1,3 +1,16 @@
+rsnapshot (1.4.3-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+  * Update d/watch to point at github instead of rsnapshot.org
+  * Remove merged patches:
+    + patches/02_rsnapshot-lvm-undef.diff
+    + patches/18_rsnapreport_rsync_output.diff
+  * d/rules:
+    + Update to work with source changes
+    + Disable newly-added tests
+
+ -- Michael Lustfield <michael@lustfield.net>  Tue, 03 Dec 2019 23:42:05 -0600
+
 rsnapshot (1.4.2-2) unstable; urgency=medium
 
   * Adopt rsnapshot (Closes: #939427)
