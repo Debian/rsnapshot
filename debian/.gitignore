@@ -1,0 +1,7 @@
+autoreconf.after
+autoreconf.before
+files
+rsnapshot.debhelper.log
+rsnapshot.substvars
+rsnapshot/
+*~
