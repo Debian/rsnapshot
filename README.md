@@ -10,11 +10,11 @@ The code makes extensive use of hard links whenever possible, to greatly reduce
 the disk space required.
 
 It is written entirely in perl with no module dependencies, and has been
-tested with versions 5.004 through 5.16.3. It should work on any reasonably
+tested with versions 5.004 through 5.24.3. It should work on any reasonably
 modern UNIX compatible OS. It has been tested successfully on the following
 operating systems:
 
- - Debian: 3.0 (woody), 3.1 (sarge), unstable (sid)
+ - Debian: 3.0 (woody), 9.9 (stretch)
  - Redhat: 7.x, 8.0
  - RedHat Enterprise Linux: 3.0 ES, 5, 6
  - Fedora Core: 1, 3
@@ -23,17 +23,16 @@ operating systems:
  - WhiteBox Enterprise Linux 3.0
  - Slackware 9.0
  - SuSE: 9.0
+ - Gentoo Linux
  - FreeBSD 4.9-STABLE
  - OpenBSD 3.x
  - Solaris 8 (SPARC and x86)
  - Mac OS X
  - IRIX 6.5
 
-If this is your first experience with rsnapshot, you may want to read the
-rsnapshot HOWTO at http://www.rsnapshot.org/. The HOWTO will give you a detailed
-walk-through on how to get rsnapshot up and running in explicit detail.
-
-For a reference of all available commands, see the rsnapshot man page.
+If this is your first experience with rsnapshot, you may want to read the man
+page which will give you a detailed walk-through on how to get rsnapshot up and
+running and also serve as a reference of all available commands.
 
 If you are upgrading from version 1.1.6 or earlier, make sure you read the
 file [Upgrading from 1.1](docs/Upgrading_from_1.1).
@@ -43,7 +42,10 @@ For installation or upgrade instructions please read the [INSTALL](INSTALL.md) d
 If you want to work on improving rsnapshot please read the
 [CONTRIBUTING](CONTRIBUTING.md) doc.
 
-COMPATIBILITY NOTICES (Please read)
+If you want to ask a question or have a general discussion use the
+[Mailing List](https://lists.sourceforge.net/lists/listinfo/rsnapshot-discuss).
+
+## COMPATIBILITY NOTICES (Please read)
 
  1. Note that systems which use GNU cp version 5.9 or later will have problems
     with rsnapshot versions up to and including 1.2.3, if `cmd_cp` is enabled

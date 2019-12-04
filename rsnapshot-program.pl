@@ -3684,8 +3684,8 @@ sub rsync_backup_point {
 		$rsync_short_args = $$bp_ref{'opts'}->{'rsync_short_args'};
 	}
 	if (defined($$bp_ref{'opts'}) && defined($$bp_ref{'opts'}->{'extra_rsync_short_args'})) {
-		$rsync_short_args .= ' ' if ($rsync_short_args);
-		$rsync_short_args .= $$bp_ref{'opts'}->{'extra_rsync_short_args'};
+		$rsync_short_args .= '-' if (!$rsync_short_args);
+		$rsync_short_args .= substr $$bp_ref{'opts'}->{'extra_rsync_short_args'}, 1;
 	}
 
 	# RSYNC LONG ARGS
@@ -3947,13 +3947,13 @@ sub rsync_backup_point {
 	# delte the traps manually
 	# umount LVM Snapshot if it is mounted
 	if (1 == $traps{"linux_lvm_mountpoint"}) {
-		undef $traps{"linux_lvm_mountpoint"};
+		$traps{"linux_lvm_mountpoint"} = 0;
 		linux_lvm_unmount();
 	}
 
 	# destroy snapshot created by rsnapshot
 	if (0 ne $traps{"linux_lvm_snapshot"}) {
-		undef $traps{"linux_lvm_snapshot"};
+		$traps{"linux_lvm_snapshot"} = 0;
 		linux_lvm_snapshot_del(linux_lvm_parseurl($lvm_src));
 	}
 }
@@ -4201,7 +4201,7 @@ sub handle_rsync_error {
 	elsif (23 == $retval) {
 		print_warn(
 			"Some files and/or directories in $$bp_ref{'src'} only transferred partially during rsync operation",
-			4
+			2
 		);
 		syslog_warn(
 			"Some files and/or directories in $$bp_ref{'src'} only transferred partially during rsync operation"
@@ -6691,7 +6691,7 @@ your needs.
 Long lines may be split over several lines.  "Continuation" lines
 B<must> begin with a space or a tab character.  Continuation lines will
 have all leading and trailing whitespace stripped off, and then be appended
-with an intervening tab character to the previous line when the configuation
+with an intervening tab character to the previous line when the configuration
 file is parsed.
 
 Here is a list of allowed parameters:
@@ -7171,7 +7171,7 @@ B<backup  lvm://vg0/home/path2/       lvm-vg0/>
 =over 4
 
 Backs up the LVM logical volume called home, of volume group vg0, to
-<snapshot_root>/<interval>.0/lvm-vg0/. Will create, mount, backup, unmount and remove an LVM
+<snapshot_root>/<retain>.0/lvm-vg0/. Will create, mount, backup, unmount and remove an LVM
 snapshot for each lvm:// entry.
 
 =back
@@ -7211,7 +7211,9 @@ additional disk space will be taken up.
 =back
 
 B<backup_exec      ssh root@1.2.3.4 "du -sh /.offsite_backup"                     optional/>
+
 B<backup_exec      rsync -az /.snapshots/daily.0 root@1.2.3.4:/.offsite_backup/   required/>
+
 B<backup_exec      /bin/true/>
 
 =over 4
