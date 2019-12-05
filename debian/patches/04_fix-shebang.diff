@@ -1,0 +1,11 @@
+Description: Fix shebang to comply with Debian Policy 10.4
+Author: Michael Lustfield <mtecknology@debian.org>
+
+--- a/utils/rsnapreport.pl
++++ b/utils/rsnapreport.pl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!/usr/bin/perl
+ # this script prints a pretty report from rsnapshot output
+ # in the rsnapshot.conf you must set
+ # verbose >= 4

@@ -1,3 +1,4 @@
 01_rsnapshot_conf.diff
-05_backup_pgsql.diff
-15-remove-dead-external-css-link.patch
+02_backup_pgsql.diff
+03_remove-dead-external-css-link.diff
+04_fix-shebang.diff
