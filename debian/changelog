@@ -1,4 +1,4 @@
-rsnapshot (1.4.3-1) UNRELEASED; urgency=medium
+rsnapshot (1.4.3-1) unstable; urgency=medium
 
   * New upstream release
   * Update d/watch to point at github instead of rsnapshot.org
@@ -12,7 +12,7 @@ rsnapshot (1.4.3-1) UNRELEASED; urgency=medium
   * Drop deprecated d/compat file
   * Minor bump in Standards-Version to 4.4.1.2
 
- -- Michael Lustfield <michael@lustfield.net>  Tue, 03 Dec 2019 23:42:05 -0600
+ -- Michael Lustfield <michael@lustfield.net>  Wed, 04 Dec 2019 20:26:49 -0600
 
 rsnapshot (1.4.2-2) unstable; urgency=medium
 
