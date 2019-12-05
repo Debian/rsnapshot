@@ -13,7 +13,7 @@ Vcs-Git: https://github.com/MTecknology/rsnapshot.git
 Package: rsnapshot
 Architecture: all
 Depends: ${perl:Depends}, ${misc:Depends}, rsync, logrotate, liblchown-perl
-Recommends: openssh-client | ssh-client
+Recommends: openssh-client | ssh-client, cron-daemon | anacron
 Description: local and remote filesystem snapshot utility
  rsnapshot is an rsync-based filesystem snapshot utility. It can take
  incremental backups of local and remote filesystems for any number of

@@ -1,1 +1,5 @@
+# Place more restrictive permissions on snapshot storage directory
 rsnapshot: non-standard-dir-perm var/cache/rsnapshot/ 0700 != 0755
+
+# SysD does not provide a comparable alternative to proper cron utilities
+rsnapshot: missing-systemd-timer-for-cron-script etc/cron.d/rsnapshot
