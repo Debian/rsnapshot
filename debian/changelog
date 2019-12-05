@@ -10,6 +10,7 @@ rsnapshot (1.4.3-1) UNRELEASED; urgency=medium
     + Disable newly-added tests
   * Replace use of dpkg-maintscript-helper with maintscript
   * Drop deprecated d/compat file
+  * Minor bump in Standards-Version to 4.4.1.2
 
  -- Michael Lustfield <michael@lustfield.net>  Tue, 03 Dec 2019 23:42:05 -0600
 
