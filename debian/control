@@ -2,7 +2,7 @@ Source: rsnapshot
 Section: utils
 Priority: optional
 Maintainer: Michael Lustfield <michael@lustfield.net>
-Build-Depends: debhelper (>= 12), debhelper-compat (= 12)
+Build-Depends: debhelper, debhelper-compat (= 12)
 Build-Depends-Indep: openssh-client | ssh-client, rsync, lvm2, udev
 Standards-Version: 4.4.1.2
 Rules-Requires-Root: no

@@ -1,3 +1,11 @@
+rsnapshot (1.4.3-3) UNRELEASED; urgency=medium
+
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on debhelper.
+    + Remove 5 maintscript entries from 1 files.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Wed, 16 Jun 2021 01:19:29 -0000
+
 rsnapshot (1.4.3-2) unstable; urgency=medium
 
   * Use secure URI in Homepage field.
