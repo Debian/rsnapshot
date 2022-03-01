@@ -1,6 +1,0 @@
-# Remove obsolete cron files; migrated to cron.d
-rm_conffile /etc/cron.monthly/rsnapshot 1.3.1-6 rsnapshot
-rm_conffile /etc/cron.daily/rsnapshot   1.3.1-6 rsnapshot
-rm_conffile /etc/cron.hourly/rsnapshot  1.3.1-6 rsnapshot
-rm_conffile /etc/cron.weekly/rsnapshot  1.3.1-6 rsnapshot
-rm_conffile /etc/default/rsnapshot      1.3.1-6 rsnapshot
